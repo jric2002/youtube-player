@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/* GENERAL */
+:root {
+  --black-color: #000000;
+  --gray-color: #0f0f12;
+  --green-color: #98ca3f;
+  --yellow-color: #fcee0a;
+  --sky-blue-color: #2490fc;
+  --white-color: #ffffff;
+  --color-opacity-white: rgba(255, 255, 255, 0.5);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./typography/Roboto/Roboto-Light.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--white-color);
+  font-family: "Roboto", sans-serif;
+}
+/*
+body::before {
+  content: "";
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(farthest-side at top left, rgba(34, 91, 148, 0.15), transparent);
+  z-index: -1;
+}
+body::after {
+  content: "";
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  bottom: 0;
+  right: 0;
+  background-image: radial-gradient(farthest-side at bottom right, rgba(36, 144, 252, 0.15), transparent);
+  z-index: -1;
+}
+/*
+/* Desktop */
+/*
+@media screen and (min-width: 720px) {
+  body::before, body::after {
+    width: 500px;
+    height: 500px;
+  }
+}
+*/
+/* Tablet */
+/*
+@media screen and (max-width: 720px) and (min-width: 640px) {
+  body::before, body::after {
+    width: 350px;
+    height: 350px;
+  }
+}
+*/
+/* Mobile */
+/*
+@media screen and (max-width: 640px) {
+  body::before, body::after {
+    width: 200px;
+    height: 200px;
+  }
+}
+*/
+
+/* START */
+.start {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("./../img/atardecer-en-el-bosque.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; */
+  position: relative;
+  z-index: 0;
+}
+.image-1 {
+  background-image: url("./../img/atardecer-en-el-bosque.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.image-2 {
+  background-image: url("./../img/cyberpunk-city-rain.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.image-3 {
+  background-image: url("./../img/cyberpunk-city.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.image-4 {
+  background-image: url("./../img/niebla.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.transition-image {
+  transition: all 1s linear;
+}
+.start::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.start div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin: 0.5rem;
+}
+/* Desktop */
+@media screen and (min-width: 768px) {
+  .start div {
+    transform: scale(1, 1);
+  }
+}
+/* Tablet */
+@media screen and (max-width: 720px) and (min-width: 512px) {
+  .start div {
+    transform: scale(0.75, 0.75);
+  }
+}
+/* Mobile */
+@media screen and (max-width: 512px) and (min-width: 425px) {
+  .start div {
+    transform: scale(0.6, 0.6);
+  }
+}
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .start div {
+    transform: scale(0.5, 0.5);
+  }
+}
+@media screen and (max-width: 320px) {
+  .start div {
+    transform: scale(0.4, 0.4);
+  }
+}
